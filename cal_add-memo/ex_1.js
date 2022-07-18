@@ -4,7 +4,7 @@ const content=document.querySelector("#content");
 const btn=document.querySelector("button");
 
 
-let pParent=e.target.parentNode;
+// let pParent=e.target.parentNode;
 
 
 cal.addEventListener("click",function(e){
