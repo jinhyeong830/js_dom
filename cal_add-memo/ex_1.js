@@ -8,7 +8,7 @@ cal.addEventListener("click",function(e){
     if(e.target.tagName==="P"){
         date.value=e.target.textContent;
         pParent=e.target.parentNode;
-    }else {
+    }else{
         // 테이블 TD가 클릭 되면 TD를 전역 변수에 저장하여 위치 전달 why?
         //날짜 뿐만 아니라 날짜에 대한 칸을 눌러도 동작하도록
         date.value = e.target.firstChild.textContent;
@@ -35,7 +35,13 @@ cal.addEventListener("click",function(e){
     if(e.target.tagName==="DIV"){
         console.log(e.target.tagName);
         e.target.remove(); //왜 div가 넘어가지?
-        date.value=""; //날짜 칸으로 div내용이 들어가서 date.value 초기화 시켜줌.. 
+                            /*맨 위의 addEventListener의 else이하도
+                            같은 e.target을 가리키고 있기 때문이지*/
+        date.value=""; /*날짜 칸으로 div내용이 들어가서 date.value 초기화 시켜줌!
+                        다른 방법? 맨 위의 addEventListener의 익명함수에서 
+                        else가 아닌 else if를 써줘서 
+                        (&&e.target.tagName!='DIV')이라는 조건을 추가해주면 
+                        되지 않을까욧? */
     }
 })     
          
