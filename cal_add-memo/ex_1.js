@@ -18,11 +18,15 @@ cal.addEventListener("click",function(e){
 
     //전역 함수 만들기
 function writeSchedule(){
-    let dv=document.createElement("div");
-    dv.textContent=content.value;
-    pParent.append(dv);
-    content.value=""; //클릭 누르면 txt창 초기화시키기
-    date.value="";
+    if(content.value===""){
+        content.setAttribute("placeholder","내용을 입력해주세요");
+    }else{
+        let dv=document.createElement("div");
+        dv.textContent=content.value;
+        pParent.append(dv);
+        content.value=""; //클릭 누르면 txt창 초기화시키기
+        date.value="";
+    }
 }
         
          
