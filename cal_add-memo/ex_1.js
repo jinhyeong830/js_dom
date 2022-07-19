@@ -16,19 +16,27 @@ cal.addEventListener("click",function(e){
     }
 });
 
+let dv;
     //전역 함수 만들기
 function writeSchedule(){
     if(content.value===""){
         content.setAttribute("placeholder","내용을 입력해주세요");
     }else{
-        let dv=document.createElement("div");
+        dv=document.createElement("div");
         dv.textContent=content.value;
         pParent.append(dv);
         content.value=""; //클릭 누르면 txt창 초기화시키기
         date.value="";
     }
 }
-        
+
+cal.addEventListener("click",function(e){//child로 접근?
+    if(e.target.tagName==="DIV"){
+        console.log(e.target.tagName);
+        e.target.remove(); //왜 dv가 넘어가지?
+        date.value="";
+    }
+})     
          
     
     
