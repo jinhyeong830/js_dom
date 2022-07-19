@@ -33,8 +33,8 @@ function writeSchedule(){
 cal.addEventListener("click",function(e){//child로 접근?
     if(e.target.tagName==="DIV"){
         console.log(e.target.tagName);
-        e.target.remove(); //왜 dv가 넘어가지?
-        date.value="";
+        e.target.remove(); //왜 div가 넘어가지?
+        date.value=""; //날짜 칸으로 div내용이 들어가서 date.value 초기화 시켜줌.. 
     }
 })     
          
