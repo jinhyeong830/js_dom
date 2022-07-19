@@ -16,13 +16,13 @@ cal.addEventListener("click",function(e){
     }
 });
 
-let dv;
+
     //전역 함수 만들기
 function writeSchedule(){
     if(content.value===""){
         content.setAttribute("placeholder","내용을 입력해주세요");
     }else{
-        dv=document.createElement("div");
+        let dv=document.createElement("div");
         dv.textContent=content.value;
         pParent.append(dv);
         content.value=""; //클릭 누르면 txt창 초기화시키기
@@ -30,7 +30,8 @@ function writeSchedule(){
     }
 }
 
-cal.addEventListener("click",function(e){//child로 접근?
+//delete-div 클릭시 삭제되도록
+cal.addEventListener("click",function(e){
     if(e.target.tagName==="DIV"){
         console.log(e.target.tagName);
         e.target.remove(); //왜 div가 넘어가지?
