@@ -784,17 +784,17 @@ header .badges .badge {
   opacity: 0;
 }
 
-/* .indonesia:hover .inner .indonesia__img {
+ .indonesia.animate .inner .indonesia__img {
   transition: 1.5s;
   opacity: 1;
   transition-delay: 0.8s;
 }
 
-.indonesia:hover::before,
-.indonesia:hover::after {
+.indonesia.animate::before,
+.indonesia.animate::after {
   opacity: 1;
   transition: 1.5s;
-} */
+} 
 
 .indonesia .inner .btn.btn--gold {
   position: absolute;

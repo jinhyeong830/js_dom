@@ -98,18 +98,12 @@ window.addEventListener("scroll",function(){
 });
 
 //INDONESIA
-let indoImg=document.querySelector(".indonesia__img");
-let indoBefore=document.querySelector(".indonesia::before");
-let indoAfter=document.querySelector(".indonesia::after");
 
-console.log(indoBefore);
-console.log(indoAfter);
 window.addEventListener("scroll",function(){
     scrollYpos=window.scrollY;
     if(scrollYpos>800){
-       indoImg.style="transition: 1.5s; opacity: 1; transition-delay: 0.8s;";
-       indoBefore.style="opacity: 1; transition: 1.5s;";
-       indoAfter.style="opacity: 1; transition: 1.5s;";
+        const indoAni=this.document.querySelector(".indonesia");
+      indoAni.classList.add("animate");
     }
 });
 
